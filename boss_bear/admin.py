@@ -8,6 +8,7 @@ class EmployeeAdmin(admin.ModelAdmin):
         'id_card_number',
         'mobile_number',
         'sex',
+        'age',
         'nationality'
     ]
 

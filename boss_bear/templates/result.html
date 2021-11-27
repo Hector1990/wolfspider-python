@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+{% load bootstrap5 %}
+
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+
+<html lang="en">
+<head>
+    <script type="text/javascript">
+function goBack()
+  {
+  window.history.back()
+  }
+</script>
+
+    <meta charset="UTF-8">
+    <title>{{ msg_title }}</title>
+</head>
+<body class="row form-group text-center" style="margin-top: 10%">
+{% if error_message %}
+<div >
+  <strong>{{ error_message }}</strong>
+  {% buttons %}
+    <button type="submit" class="btn btn-primary"  onclick="goBack()" >
+       重新提交
+    </button>
+  {% endbuttons %}
+
+</div>
+{% endif %}
+
+{% if happy_message %}
+<div>
+    <strong>{{ happy_message }}</strong>
+</div>
+{% endif %}
+</body>
+</html>
+
